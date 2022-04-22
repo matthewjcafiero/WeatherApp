@@ -5,14 +5,22 @@
   <title id="title">Weather Check</title>
 </head>
 
-<body>
+<body id="header">
 
   <script src="scripts.js"></script>
 
   <h1>Welcome to Weather Check</h1>
-  <p id="out"></p>
-  <button onclick="getWeatherByLatLong(42.4406,-76.4966)">Get Weather</button>
 
+  <form id="search">
+    <!-- how do I make it so you can hit enter to submit form -->
+    Enter a location: <input id="location" type="text" name="city"><br>
+    <input type="button" onclick="locationInput(); destroySuggestions();" value="submit">
+  </form>
+
+</body>
+
+<body id="output">
+  <p id="out"></p>
 </body>
 
 </html>
