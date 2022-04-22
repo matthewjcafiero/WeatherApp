@@ -14,8 +14,10 @@
     <form id="search">
       <!-- how do I make it so you can hit enter to submit form -->
       Enter a location: <input id="location" type="text" name="city"><br>
-      <input type="button" onclick="locationInput(); destroySuggestions(); destroyForecasts();" value="submit">
+      <input type="button" onclick="locationInput(); destroySuggestions(); destroyForecasts();" value="Submit">
     </form>
+    <button id="curLoc" onclick="currentLocationInput(); destroySuggestions(); destroyForecasts();">Current
+      Location</button>
     <p id="suggestions"></p>
   </div>
 

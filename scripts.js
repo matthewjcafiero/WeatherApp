@@ -44,7 +44,27 @@ function updateHourly(data) {
   document.getElementById("forecast").innerHTML = output;
 }
 
+function update4Day(data) {
+  let output = "";
+  for (let i = 1; i <= 4; i++) {
+    output += dayConvert(data.daily[i].dt + data.timezone_offset) + ": Low / High: "
+      + data.daily[i].temp.min + "&#176 F / " + data.daily[i].temp.max
+      + "&#176 F - " + capitalize(data.daily[i].weather[0].description) + " - "
+      + data.daily[i].clouds + "% cloudy<br>";
+  }
+  document.getElementById("forecast").innerHTML = output;
+}
 
+function update7Day(data) {
+  let output = "";
+  for (let i = 1; i <= 7; i++) {
+    output += dayConvert(data.daily[i].dt + data.timezone_offset) + ": Low / High: "
+      + data.daily[i].temp.min + "&#176 F / " + data.daily[i].temp.max
+      + "&#176 F - " + capitalize(data.daily[i].weather[0].description) + " - "
+      + data.daily[i].clouds + "% cloudy<br>";
+  }
+  document.getElementById("forecast").innerHTML = output;
+}
 
 function createForecast(data, city) {
   let btn1 = document.createElement("button");
@@ -62,13 +82,13 @@ function createForecast(data, city) {
   let btn3 = document.createElement("button");
   btn3.id = "Forecast 4Day"
   btn3.innerHTML = "4 Day";
-  btn3.onclick = function () { Update4Day(data); };
+  btn3.onclick = function () { update4Day(data); };
   document.getElementById("forecastBtns").append(btn3);
 
   let btn4 = document.createElement("button");
   btn4.id = "Forecast 7Day"
   btn4.innerHTML = "7 Day";
-  btn4.onclick = function () { Update7Day(data); };
+  btn4.onclick = function () { update7Day(data); };
   document.getElementById("forecastBtns").append(btn4);
 
   btn1.click();
@@ -101,7 +121,7 @@ function updateWeather(data, city) {
   output += city.country;
   document.getElementById("outTitle").innerHTML = output;
   output = data.current.temp + '&#176 F - ' + capitalize(data.current.weather[0].description) + '<br><br>';
-  // output += "High / Low: " + data.main.temp_min + "&#176 / " + data.main.temp_max + "&#176<br>";
+  output += "High / Low: " + data.daily[0].temp.min + "&#176 / " + data.daily[0].temp.max + "&#176<br>";
   output += "Feels like: " + data.current.feels_like + '&#176<br>';
   output += "Humidity: " + data.current.humidity + "%<br>";
   output += "Wind Conditions: " + data.current.wind_speed + " mph, " + cardinalConvert(data.current.wind_deg) + "<br>";
@@ -116,6 +136,13 @@ function updateWeather(data, city) {
   output += "Current Time: " + timeConvert(data.current.dt + data.timezone_offset) + "<br>";
   output += "Sunset: " + timeConvert(data.current.sunset + data.timezone_offset) + "<br>";
   document.getElementById("out").innerHTML = output;
+}
+
+function dayConvert(sec) {
+  let date = new Date(sec * 1000);
+  let str = date.toUTCString();
+  let tempStr1 = str.split(",");
+  return tempStr1[0];
 }
 
 function timeConvert(sec) {
@@ -228,5 +255,29 @@ function locationInput() {
       getWeatherByCity(data[0]);
     }
   });
+}
+var btn = document.getElementById("curLoc");
+
+function currentLocationInput() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(currentLocationInputTransition);
+  } else {
+    btn.innerHTML = "Current location not supported by browser";
+    btn.disabled = true;
+  }
+}
+
+function currentLocationInputTransition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url = 'http://api.openweathermap.org/geo/1.0/reverse?lat=' + lat + '&lon=' + lon + '&limit=5&appid=' + apiKey;
+  getData(url).then(data => {
+    console.log(data);
+    if (data.length == 0){
+      noCity();
+    } else{
+      getWeatherByCity(data[0]);
+    }
+  })
 }
 
