@@ -5,22 +5,30 @@
   <title id="title">Weather Check</title>
 </head>
 
-<body id="header">
-
-  <script src="scripts.js"></script>
+<body>
 
   <h1>Welcome to Weather Check</h1>
+  <p id="clock"></p>
 
-  <form id="search">
-    <!-- how do I make it so you can hit enter to submit form -->
-    Enter a location: <input id="location" type="text" name="city"><br>
-    <input type="button" onclick="locationInput(); destroySuggestions();" value="submit">
-  </form>
+  <div>
+    <form id="search">
+      <!-- how do I make it so you can hit enter to submit form -->
+      Enter a location: <input id="location" type="text" name="city"><br>
+      <input type="button" onclick="locationInput(); destroySuggestions(); destroyForecasts();" value="submit">
+    </form>
+    <p id="suggestions"></p>
+  </div>
+
+  <div>
+    <h3 id="outTitle"></h3>
+    <p id="out"></p>
+    <p id="forecastBtns"></p>
+    <p id="forecast"></p>
+  </div>
 
 </body>
 
-<body id="output">
-  <p id="out"></p>
-</body>
+<script src="clock.js"></script>
+<script src="scripts.js"></script>
 
 </html>
