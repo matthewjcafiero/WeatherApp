@@ -6,7 +6,10 @@ function getDate() {
 getDate();
 
 function dayConvert(num) {
-  if (num == 1) {
+  if (num == 0) {
+    return "Sunday";
+  }
+  else if (num == 1) {
     return "Monday";
   }
   else if (num == 2) {
@@ -23,9 +26,6 @@ function dayConvert(num) {
   }
   else if (num == 6) {
     return "Saturday";
-  }
-  else if (num == 7) {
-    return "Sunday";
   }
 }
 
@@ -67,3 +67,5 @@ function monthConvert(num) {
     return "December";
   }
 }
+
+

@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(201, 223, 231);
+  font-family: verdana;
+
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+  text-align: center;
+}
+
+h3 {
+  background-color: aliceblue;
+}
+
+p {
+  font-size: 16px;
+}
+
+button {
+  font-family: verdana;
+}
+
+form {
+  font-family: verdana;
+}
+
+input {
+  font-family: verdana;
+}
+
+div {
+  background-color: aliceblue;
+}
