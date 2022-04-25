@@ -2,18 +2,22 @@
 <html>
 
 <head>
-  <title id="title">Weather Check</title>
+  <title id="title">Weather Me Up Buttercup</title>
   <link rel="stylesheet" href="generalStyle.css">
 </head>
 
 <body>
 
-  <button id="changeUnits" onclick="changeUnits();">Units: Imperial</button>
-  <button id="refreshData" onclick="refreshData();">Refresh Data</button>
-  <button id="autoUpdate" onclick="run();">Auto Update: On</button>
+  <div id="header">
+    <button id="changeUnits" class="header" onclick="changeUnits();">Units: Imperial</button>
+    <button id="refreshData" class="header" onclick="refreshData();">Refresh Data</button>
+    <button id="autoUpdate" class="header" onclick="autoUpdate();">Auto Update: On</button>
+  </div>
 
-  <h1>Weather Check</h1>
-  <p id="clock"></p>
+  <div id="title">
+    <h1>Weather Me Up Buttercup</h1>
+    <p id="clock"></p>
+  </div>
 
   <div>
     <form id="search">
@@ -37,8 +41,8 @@
 
 </body>
 
+<script src="actions.js"></script>
 <script src="clock.js"></script>
 <script src="scripts.js"></script>
-<script src="actions.js"></script>
 
 </html>

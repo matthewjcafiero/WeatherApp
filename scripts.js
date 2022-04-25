@@ -1,3 +1,4 @@
+
 var apiKey = '88b8118d2b34045a3aafab201da35ed0';
 var units = 'imperial';
 var degUnits = "&#176 F";
@@ -377,4 +378,6 @@ function currentLocationInputTransition(position) {
     }
   })
 }
+
+
 

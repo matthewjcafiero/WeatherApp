@@ -1,35 +1,39 @@
 body {
-  background-color: rgb(201, 223, 231);
+  background-color: rgb(88, 141, 160);
   font-family: verdana;
 
 }
 
 h1 {
-  color: rgb(0, 0, 0);
-  background-color: aliceblue;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
 h3 {
-  background-color: aliceblue;
+  color: rgb(255, 255, 255);
 }
 
 p {
   font-size: 16px;
+  color: rgb(255, 255, 255);
 }
 
 button {
   font-family: verdana;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  outline-color: white;
 }
 
 form {
   font-family: verdana;
+  color: rgb(255, 255, 255);
+
 }
 
 input {
   font-family: verdana;
-}
-
-div {
-  background-color: aliceblue;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  outline-color: white;
 }
