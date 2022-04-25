@@ -50,7 +50,7 @@ async function getData(url) {
   return data;
 }
 
-/** [noCity()] updates the "out" element of the main.html to display a no 
+/** [noCity()] updates the "out" element of the index.html to display a no 
  * response string */
 function noCity() {
   document.getElementById("out").innerHTML = document.getElementById("location").value + " is not a valid city.  No suggested results.";
@@ -123,9 +123,9 @@ function update7Day(data) {
 }
 
 /** [createForecast(data)] takes in the weather information from the data 
- * structure [data] and creates 4  buttons in main.html, where each 
+ * structure [data] and creates 4  buttons in index.html, where each 
  * button corresponds to a different forecast based on [data].  When a forecast 
- * button is pressed, it updates the "forecast" paragraph of main.html to show 
+ * button is pressed, it updates the "forecast" paragraph of index.html to show 
  * the associated forecast.  The forecasts that can be called are "Next Hour", 
  * "Hourly", "4 Day", and "7 Day".  This function also automatically presses the
  * "Next Hour" forecast button, displaying the forecast instantly to the user 
@@ -169,8 +169,8 @@ function createForecast(data) {
 }
 
 /** [destroyFoercasts()], when called, checks for any forecasting buttons and 
- * removes them from main.html, and then clears the text of "forecast" in 
- * main.html by changing its value to "". */
+ * removes them from index.html, and then clears the text of "forecast" in 
+ * index.html by changing its value to "". */
 function destroyForecasts() {
   while (document.getElementById("Forecast NextHour") != undefined) {
     document.getElementById("Forecast NextHour").remove();
@@ -189,7 +189,7 @@ function destroyForecasts() {
 }
 
 /** [destroyData()], when called, changes the text of both "out" and "outTitle"
- *  in main.html to "", effectively clearing them. */
+ *  in index.html to "", effectively clearing them. */
 function destroyData() {
   if (document.getElementById("out") != undefined) {
     document.getElementById("out").innerHTML = "";
