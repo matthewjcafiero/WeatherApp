@@ -6,40 +6,16 @@
  * index.html, as well as called whenever the "refreshData" button is pressed.
  * ************************************************************************** */
 
+/* *** Global Variables ***************************************************** */
+/** [days[i]] represents the day of the week, given i's range is [0,6]. */
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+  "Saturday"];
+
+/** [months[i]] represents the month of the yearr, given i's range is [1,12]. */
+let months = [undefined, "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
 /* *** Functions ************************************************************ */
-
-/** [dayConvert(num)] is a helper function for [getDate()] which takes in [num] 
- * where num's range is 0..6 and returns the day of the week [num] refers to, 
- * returning undefined for any invalid [num]. */
-function dayConvert(num) {
-  if (num == 0) { return "Sunday"; }
-  else if (num == 1) { return "Monday"; }
-  else if (num == 2) { return "Tuesday"; }
-  else if (num == 3) { return "Wednesday"; }
-  else if (num == 4) { return "Thursday"; }
-  else if (num == 5) { return "Friday"; }
-  else if (num == 6) { return "Saturday"; }
-  return undefined;
-}
-
-/** [monthConvert(num)] is a helper function for [getDate()] which takes in 
- * [num] where num's ranges is 1..12 and returns the month [num] refers to, 
- * returning undefined for any invalid [num]. */
-function monthConvert(num) {
-  if (num == 1) { return "January"; }
-  else if (num == 2) { return "February"; }
-  else if (num == 3) { return "March"; }
-  else if (num == 4) { return "April"; }
-  else if (num == 5) { return "May"; }
-  else if (num == 6) { return "June"; }
-  else if (num == 7) { return "July"; }
-  else if (num == 8) { return "August"; }
-  else if (num == 9) { return "September"; }
-  else if (num == 10) { return "October"; }
-  else if (num == 11) { return "November"; }
-  else if (num == 12) { return "December"; }
-  return undefined;
-}
 
 /** [getDate()], when called, updates the innerHTML of the "clock" element in 
  * index.html with the current day and date at the time of call, in the format 
@@ -47,7 +23,7 @@ function monthConvert(num) {
 function getDate() {
   let date = new Date();
   document.getElementById("clock").innerHTML = "It is "
-    + dayConvert(date.getDay()) + ", " + monthConvert(date.getMonth()) + " "
+    + days[date.getDay()] + ", " + months[date.getMonth()] + " "
     + date.getDate() + ", " + date.getFullYear() + ".";
 }
 

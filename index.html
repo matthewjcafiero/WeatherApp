@@ -9,9 +9,15 @@
 <body>
 
   <div id="header">
-    <button id="changeUnits" class="header" onclick="changeUnits();">Units: Imperial</button>
-    <button id="refreshData" class="header" onclick="refreshData();">Refresh Data</button>
-    <button id="autoUpdate" class="header" onclick="autoUpdate(); getDate()">Auto Update: On</button>
+    <button id="changeUnits" class="header" onclick="changeUnits();">
+      Units: Imperial
+    </button>
+    <button id="refreshData" class="header" onclick="refreshData();">
+      Refresh Data
+    </button>
+    <button id="autoUpdate" class="header" onclick="autoUpdate(); getDate()">
+      Auto Update: On
+    </button>
   </div>
 
   <div id="title">
@@ -20,16 +26,22 @@
   </div>
 
   <div>
+    <small>
+      Note: Locations should be entered as "City Name", "City Name, 
+      State Name", "City Name, Country Abbreviation", or "City Name, State Name, County Abbreviation" <br>
+      Ex: "Tampa", "Tampa, Florida", "Tampa, US", or "Tampa, Florida, US" <br>   ---
+    </small>
     <form id="search">
-      <!-- how do I make it so you can hit enter to submit form -->
       Enter a location: <input id="location" type="text" name="city"><br>
-      <input type="button" onclick="locationInput(); destroySuggestions(); destroyForecasts(); destroyData();"
-        value="Submit">
+      <input type="button" onclick="locationInput(); destroySuggestions(); 
+        destroyForecasts(); destroyData();" value="Submit">
     </form>
-    <button id="curLoc"
-      onclick="currentLocationInput(); destroySuggestions(); destroyForecasts(); destroyData();">Current
-      Location</button>
+    <button id="curLoc" onclick="currentLocationInput(); destroySuggestions(); 
+      destroyForecasts(); destroyData();">
+      Current Location
+    </button>
     <p id="suggestions"></p>
+    <small id="suggestionsWarning"></small>
   </div>
 
   <div>
@@ -41,8 +53,12 @@
 
 </body>
 
-<script src="actions.js"></script>
 <script src="clock.js"></script>
-<script src="scripts.js"></script>
+<script src="data.js"></script>
+<script src="actions.js"></script>
+
+<address>
+  By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
+</address>
 
 </html>

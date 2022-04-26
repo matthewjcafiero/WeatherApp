@@ -37,3 +37,13 @@ input {
   background-color: transparent;
   outline-color: white;
 }
+
+small{
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+address{
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
