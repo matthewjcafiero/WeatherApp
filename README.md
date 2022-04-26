@@ -1,7 +1,9 @@
 # Weather Me Up Buttercup
 By Matthew Cafiero
 
+
 *** About ***
+
 Weather Me Up Buttercup is a weather application created by Matthew Cafiero that
 will display current weather conditions as well as a serious of forecasts for a
 given location inputed by the user.  This location can either be inputed by
@@ -17,7 +19,9 @@ Note: The name "Weather Me Up Buttercup" is a play on words of the song "Build
 Me Up Buttercup."  I was listening to this song when I first started this 
 project, and I thought it a fun name for it.
 
+
 *** Process ***
+
 A basic run down of how this program works; the user provides a location, either
 by name or by current location.  If by name, the Geocoding API searches for
 locations with said names, returning 1 or more locations if valid matches can be
@@ -39,18 +43,24 @@ ease of use for users when on other sites.
 NOTE: Current Location calls seem to take longer than inputted calls, so please
 wait for data to load.
 
+
 *** How to Run ***
+
 To run this program, ensure that the following files are downloaded to your pc 
 in a shared folder:
+
   "index.html"  
   "generalStyle.css"
   "clock.js"
   "data.js"
   "actions.js"
+
 Then, run index.html, which will run the program accordingly in your default
 browser.
 
+
 *** My Reflections on this Project ***
+
 I thought this was a great learning experience for me on HTML, CSS (just a bit),
 and JavaScript.  I have had no experience with HTML, and found it to be a really
 interesting language to work with that feels really different than anything I
