@@ -15,7 +15,7 @@ to the API docs can be found below:
 OpenWeather's Geocoding API: https://openweathermap.org/api/geocoding-api#direct
 OpenWeather's One Call API: https://openweathermap.org/api/one-call-api
 
-Note: The name "Weather Me Up Buttercup" is a play on words of the song "Build
+NOTE: The name "Weather Me Up Buttercup" is a play on words of the song "Build
 Me Up Buttercup."  I was listening to this song when I first started this 
 project, and I thought it a fun name for it.
 
