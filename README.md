@@ -1,6 +1,5 @@
 # Weather Me Up Buttercup
 By Matthew Cafiero
-Email: matthew.j.cafiero@gmail.com
 
 *** About ***
 Weather Me Up Buttercup is a weather application created by Matthew Cafiero that
