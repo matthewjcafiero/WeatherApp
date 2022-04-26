@@ -50,9 +50,13 @@ To run this program, ensure that the following files are downloaded to your pc
 in a shared folder:
 
   "index.html"  
+
   "generalStyle.css"
+
   "clock.js"
+
   "data.js"
+  
   "actions.js"
 
 Then, run index.html, which will run the program accordingly in your default
