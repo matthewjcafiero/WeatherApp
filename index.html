@@ -27,20 +27,25 @@
 
   <div>
     <small>
-      Note: Locations should be entered as "City Name", "City Name, 
-      State Name", "City Name, Country Abbreviation", or "City Name, State Name, County Abbreviation" <br>
-      Ex: "Tampa", "Tampa, Florida", "Tampa, US", or "Tampa, Florida, US" <br>   ---
+      Note: Locations should be entered as "City Name", "City Name,
+      State Name", "City Name, Country Abbreviation", or "City Name,
+      State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
+      "Tampa, US", or "Tampa, Florida, US" <br> ---
     </small>
-    <form id="search">
-      Enter a location: <input id="location" type="text" name="city"><br>
-      <input type="button" onclick="locationInput(); destroySuggestions(); 
-        destroyForecasts(); destroyData();" value="Submit">
+
+    <form id="search" action="#" onsubmit="locationInput(); locHelper(); stop;">
+      Enter a location:
+      <input id="location" type="text" name="city"><br>
+      <input type="submit" value="Submit">
     </form>
-    <button id="curLoc" onclick="currentLocationInput(); destroySuggestions(); 
-      destroyForecasts(); destroyData();">
+
+    <button id="curLoc" onclick="currentLocationInput(); locHelper();">
       Current Location
     </button>
-    <p id="suggestions"></p>
+
+    <div id="suggestions">
+    </div>
+
     <small id="suggestionsWarning"></small>
   </div>
 
@@ -56,6 +61,7 @@
 <script src="clock.js"></script>
 <script src="data.js"></script>
 <script src="actions.js"></script>
+<script src="search.js"></script>
 
 <address>
   By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
