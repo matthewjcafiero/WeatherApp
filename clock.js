@@ -7,6 +7,7 @@
  * ************************************************************************** */
 
 /* *** Global Variables ***************************************************** */
+
 /** [days[i]] represents the day of the week, given i's range is [0,6]. */
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
   "Saturday"];
