@@ -1,7 +1,7 @@
+/* General style */
 body {
   background-color: rgb(88, 141, 160);
   font-family: verdana;
-
 }
 
 h1 {
@@ -38,12 +38,18 @@ input {
   outline-color: white;
 }
 
-small{
+small {
   font-size: 12px;
   color: rgb(255, 255, 255);
 }
 
-address{
+address {
   font-size: 12px;
   color: rgb(255, 255, 255);
+}
+
+
+/* Specific elements style */
+#submitButton {
+  float: left;
 }

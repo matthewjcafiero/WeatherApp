@@ -14,10 +14,3 @@ function locHelper() {
   destroyForecasts();
   destroyData();
 }
-
-/** [stop()] is a helper function for the "search" form which stops the page 
- * refreshing upon submission by adding "return false" to the onsubmit data of 
- * "search". */
-function stop() {
-  return "return false;";
-}

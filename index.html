@@ -3,7 +3,7 @@
 
 <head>
   <title id="title">Weather Me Up Buttercup</title>
-  <link rel="stylesheet" href="generalStyle.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -27,21 +27,24 @@
 
   <div>
     <small>
-      Note: Locations should be entered as "City Name", "City Name,
+      Locations should be entered as "City Name", "City Name,
       State Name", "City Name, Country Abbreviation", or "City Name,
       State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
       "Tampa, US", or "Tampa, Florida, US" <br> ---
     </small>
 
-    <form id="search" action="#" onsubmit="locationInput(); locHelper(); stop;">
-      Enter a location:
-      <input id="location" type="text" name="city"><br>
-      <input type="submit" value="Submit">
-    </form>
+    <div>
+      <form id="search" onsubmit="locationInput(); locHelper(); return false;">
+        Enter a location:
+        <input id="location" type="text" name="city">
+        <br>
+        <input id="submitButton" type="submit" value="Search">
+      </form>
 
-    <button id="curLoc" onclick="currentLocationInput(); locHelper();">
-      Current Location
-    </button>
+      <button id="curLoc" onclick="currentLocationInput(); locHelper();">
+        Current Location
+      </button>
+    </div>
 
     <div id="suggestions">
     </div>
@@ -64,7 +67,7 @@
 <script src="search.js"></script>
 
 <address>
-  By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
+  Created By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
 </address>
 
 </html>

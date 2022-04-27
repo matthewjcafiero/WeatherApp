@@ -225,29 +225,38 @@ function destroyForecasts() {
  * without need for input, so when [createForecast(data)] is called both the 
  * buttons and a forecast are shown. */
 function createForecast(data) {
-  let btn1 = document.createElement("button");
-  btn1.id = "Forecast NextHour"
-  btn1.innerHTML = "Next Hour";
-  btn1.onclick = function () { currentForecast = 1; updateNextHour(data); }
-  document.getElementById("forecastBtns").append(btn1);
+  if (document.getElementById("Forecast NextHour") == undefined) {
+    let btn1 = document.createElement("button");
+    btn1.id = "Forecast NextHour"
+    btn1.innerHTML = "Next Hour";
+    btn1.onclick = function () { currentForecast = 1; updateNextHour(data); }
+    document.getElementById("forecastBtns").append(btn1);
+  }
 
-  let btn2 = document.createElement("button");
-  btn2.id = "Forecast Hourly"
-  btn2.innerHTML = "Hourly";
-  btn2.onclick = function () { currentForecast = 2; updateHourly(data); }
-  document.getElementById("forecastBtns").append(btn2);
+  if (document.getElementById("Forecast Hourly") == undefined) {
+    let btn2 = document.createElement("button");
+    btn2.id = "Forecast Hourly"
+    btn2.innerHTML = "Hourly";
+    btn2.onclick = function () { currentForecast = 2; updateHourly(data); }
+    document.getElementById("forecastBtns").append(btn2);
+  }
 
-  let btn3 = document.createElement("button");
-  btn3.id = "Forecast 4Day"
-  btn3.innerHTML = "4 Day";
-  btn3.onclick = function () { currentForecast = 3; update4Day(data); }
-  document.getElementById("forecastBtns").append(btn3);
+  if (document.getElementById("Forecast 4Day") == undefined) {
+    let btn3 = document.createElement("button");
+    btn3.id = "Forecast 4Day"
+    btn3.innerHTML = "4 Day";
+    btn3.onclick = function () { currentForecast = 3; update4Day(data); }
+    document.getElementById("forecastBtns").append(btn3);
+  }
 
-  let btn4 = document.createElement("button");
-  btn4.id = "Forecast 7Day"
-  btn4.innerHTML = "7 Day";
-  btn4.onclick = function () { currentForecast = 4; update7Day(data); }
-  document.getElementById("forecastBtns").append(btn4);
+  if (document.getElementById("Forecast 7Day") == undefined) {
+    let btn4 = document.createElement("button");
+    btn4.id = "Forecast 7Day"
+    btn4.innerHTML = "7 Day";
+    btn4.onclick = function () { currentForecast = 4; update7Day(data); }
+    document.getElementById("forecastBtns").append(btn4);
+  }
+
 
   if (currentForecast <= 1) {
     btn1.click();
@@ -492,5 +501,5 @@ function currentLocationInput() {
   let btn = document.getElementById("curLoc");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(currentLocationInputHelper);
-  } 
+  }
 }
