@@ -13,6 +13,7 @@ conditions and data are obtained via use of OpenWeather's One Call API.  Links
 to the API docs can be found below:
 
 OpenWeather's Geocoding API: https://openweathermap.org/api/geocoding-api#direct
+
 OpenWeather's One Call API: https://openweathermap.org/api/one-call-api
 
 NOTE: The name "Weather Me Up Buttercup" is a play on words of the song "Build
