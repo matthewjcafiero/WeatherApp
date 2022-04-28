@@ -26,12 +26,15 @@
     </div>
 
     <div>
-      <small>
-        Locations should be entered as "City Name", "City Name,
-        State Name", "City Name, Country Abbreviation", or "City Name,
-        State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
-        "Tampa, US", or "Tampa, Florida, US" <br><br>
-      </small>
+      <div id="searchHelp">
+        <small>
+          Locations should be entered as "City Name", "City Name,
+          State Name", "City Name, Country Abbreviation", or "City Name,
+          State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
+          "Tampa, US", or "Tampa, Florida, US" <br>
+        </small>
+      </div>
+      <br>
 
       <div id="searchBox">
         <form id="search" onsubmit="locationInput(); locHelper(); return false;">
@@ -63,7 +66,7 @@
     </address>
   </div>
 
-  
+
 </body>
 
 <script src="clock.js"></script>
