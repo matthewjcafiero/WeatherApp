@@ -1,9 +1,16 @@
 /* General style */
+html {
+  height: 100%;
+}
+
 body {
-  background-color: rgb(88, 141, 160);
+  background-color: rgb(159, 192, 204);
+  /* background: linear-gradient(90, white 50%, black 50); */
+  /* background: linear-gradient(90deg, #fdcd3b 80%, #ffed4b 80%); */
+
   font-family: verdana;
-  max-width: 960px;
   margin: auto;
+  height: 100%;
 }
 
 h1 {
@@ -78,13 +85,22 @@ address {
   font-weight: bold;
 }
 
-/* #suggestionButton:visited {
-  color: white;
-  text-decoration: underline;
-  font-weight: bold;
-} */
-
 #suggestionsWarning {
   position: relative;
   top: 10px;
+}
+
+#main {
+  background-color: rgb(88, 141, 160);
+  /* background: linear-gradient(90, white 50%, black 50); */
+  /* background: linear-gradient(90deg, #fdcd3b 80%, #ffed4b 80%); */
+
+  max-width: 960px;
+  height: 100%;
+  margin: auto;
+
+  border: 1px 50%;
+  padding: 64px;
+  padding-top: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 8px 16px 0px, rgba(60, 64, 67, 0.15) 0px 16px 48px 16px;
 }

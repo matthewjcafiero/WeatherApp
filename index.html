@@ -7,57 +7,63 @@
 </head>
 
 <body>
-
-  <div id="header">
-    <button id="changeUnits" class="header" onclick="changeUnits();">
-      Units: Imperial
-    </button>
-    <button id="refreshData" class="header" onclick="refreshData();">
-      Refresh Data
-    </button>
-    <button id="autoUpdate" class="header" onclick="autoUpdate(); getDate()">
-      Auto Update: On
-    </button>
-  </div>
-
-  <div id="title">
-    <h1>Weather Me Up Buttercup</h1>
-    <p id="clock"></p>
-  </div>
-
-  <div>
-    <small>
-      Locations should be entered as "City Name", "City Name,
-      State Name", "City Name, Country Abbreviation", or "City Name,
-      State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
-      "Tampa, US", or "Tampa, Florida, US" <br> ---
-    </small>
-
-    <div id="searchBox">
-      <form id="search" onsubmit="locationInput(); locHelper(); return false;">
-        Enter a location:
-        <input id="location" type="text" name="city">
-        <input id="submitButton" type="submit" value="Search">
-      </form>
-
-      <button id="curLoc" onclick="currentLocationInput(); locHelper();">
-        Current Location
+  <div id="main">
+    <div id="header">
+      <button id="changeUnits" class="header" onclick="changeUnits();">
+        Units: Imperial
+      </button>
+      <button id="refreshData" class="header" onclick="refreshData();">
+        Refresh Data
+      </button>
+      <button id="autoUpdate" class="header" onclick="autoUpdate(); getDate()">
+        Auto Update: On
       </button>
     </div>
 
-    <div id="suggestions">
+    <div id="title">
+      <h1>Weather Me Up Buttercup</h1>
+      <p id="clock"></p>
     </div>
 
-    <small id="suggestionsWarning"></small>
+    <div>
+      <small>
+        Locations should be entered as "City Name", "City Name,
+        State Name", "City Name, Country Abbreviation", or "City Name,
+        State Name, County Abbreviation" <br> Ex: "Tampa", "Tampa, Florida",
+        "Tampa, US", or "Tampa, Florida, US" <br><br>
+      </small>
+
+      <div id="searchBox">
+        <form id="search" onsubmit="locationInput(); locHelper(); return false;">
+          Enter a location:
+          <input id="location" type="text" name="city">
+          <input id="submitButton" type="submit" value="Search">
+        </form>
+
+        <button id="curLoc" onclick="currentLocationInput(); locHelper();">
+          Current Location
+        </button>
+      </div>
+
+      <div id="suggestions">
+      </div>
+
+      <small id="suggestionsWarning"></small>
+    </div>
+
+    <div>
+      <h3 id="outTitle"></h3>
+      <p id="out"></p>
+      <div id="forecastBtns"></div>
+      <p id="forecast"></p>
+    </div>
+
+    <address>
+      Created By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
+    </address>
   </div>
 
-  <div>
-    <h3 id="outTitle"></h3>
-    <p id="out"></p>
-    <div id="forecastBtns"></div>
-    <p id="forecast"></p>
-  </div>
-
+  
 </body>
 
 <script src="clock.js"></script>
@@ -65,8 +71,6 @@
 <script src="actions.js"></script>
 <script src="search.js"></script>
 
-<address>
-  Created By <a href="mailto:matthew.j.cafiero@gmail.com">Matthew Cafiero</a>
-</address>
+
 
 </html>
