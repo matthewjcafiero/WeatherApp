@@ -231,6 +231,10 @@ function createForecast(data) {
     btn1.innerHTML = "Next Hour";
     btn1.onclick = function () { currentForecast = 1; updateNextHour(data); }
     document.getElementById("forecastBtns").append(btn1);
+
+    if (currentForecast <= 1) {
+      btn1.click();
+    }
   }
 
   if (document.getElementById("Forecast Hourly") == undefined) {
@@ -239,7 +243,12 @@ function createForecast(data) {
     btn2.innerHTML = "Hourly";
     btn2.onclick = function () { currentForecast = 2; updateHourly(data); }
     document.getElementById("forecastBtns").append(btn2);
+
+    if (currentForecast == 2) {
+      btn2.click();
+    }
   }
+
 
   if (document.getElementById("Forecast 4Day") == undefined) {
     let btn3 = document.createElement("button");
@@ -247,6 +256,10 @@ function createForecast(data) {
     btn3.innerHTML = "4 Day";
     btn3.onclick = function () { currentForecast = 3; update4Day(data); }
     document.getElementById("forecastBtns").append(btn3);
+
+    if (currentForecast == 3) {
+      btn3.click();
+    }
   }
 
   if (document.getElementById("Forecast 7Day") == undefined) {
@@ -255,6 +268,10 @@ function createForecast(data) {
     btn4.innerHTML = "7 Day";
     btn4.onclick = function () { currentForecast = 4; update7Day(data); }
     document.getElementById("forecastBtns").append(btn4);
+
+    if (currentForecast == 4) {
+      btn4.click();
+    }
   }
 
 

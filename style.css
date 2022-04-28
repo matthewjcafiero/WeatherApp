@@ -2,6 +2,8 @@
 body {
   background-color: rgb(88, 141, 160);
   font-family: verdana;
+  max-width: 960px;
+  margin: auto;
 }
 
 h1 {
@@ -50,6 +52,40 @@ address {
 
 
 /* Specific elements style */
-#submitButton {
-  float: left;
+#search {
+  display: inline-block;
+}
+
+#curLoc {
+  display: inline-block;
+}
+
+#suggestionButton {
+  position: relative;
+  top: 5px;
+  display: block;
+  border: none;
+  padding: none;
+  text-decoration: underline;
+}
+
+#suggestionButton:hover {
+  font-weight: bold;
+}
+
+#suggestionButton:active {
+  color: lightgray;
+  font-weight: bold;
+}
+
+#suggestionButton:visited {
+  
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#suggestionsWarning {
+  position: relative;
+  top: 10px;
 }
